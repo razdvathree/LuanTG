@@ -2,5 +2,5 @@
 
 version='0.1'
 build='12iag3'
-prefix='0'
+prefix='.'
 
