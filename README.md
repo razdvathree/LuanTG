@@ -17,8 +17,7 @@
     <img alt="Issues" src="https://img.shields.io/github/issues/Azuremods/LuanTG?style=for-the-badge">
 </a>
 
-<a href="https://github.com/Azuremods/LuanTG">
-    <img alt="CodeFactor" src="https://www.codefactor.io/repository/github/Azuremods/LuanTG/badge?style=for-the-badge">    
+<a href="https://github.com/Azuremods/LuanTG">  
     <img alt="Stars" src="https://img.shields.io/github/stars/Azuremods/LuanTG?style=for-the-badge">
     <img alt="Size" src="https://img.shields.io/github/repo-size/Azuremods/LuanTG?style=for-the-badge">
     <img alt="Language" src="https://img.shields.io/github/languages/top/Azuremods/LuanTG?style=for-the-badge">
