@@ -13,7 +13,7 @@
     <img alt="last-commit" src="https://img.shields.io/github/last-commit/Azuremods/LuanTG?style=for-the-badge">
 </a>
 
-<a href="https://github.com/FoxUserbot/FoxUserbot/issues">        
+<a href="https://github.com/Azuremods/LuanTG/issues">        
     <img alt="Issues" src="https://img.shields.io/github/issues/Azuremods/LuanTG?style=for-the-badge">
 </a>
 
