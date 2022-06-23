@@ -9,7 +9,7 @@
 <br><br>
 
 
-<a href="https://github.com/FoxUserbot/FoxUserbot/commits/main">
+<a href="https://github.com/Azuremods/LuanTG/commits/main">
     <img alt="last-commit" src="https://img.shields.io/github/last-commit/Azuremods/LuanTG?style=for-the-badge">
 </a>
 
