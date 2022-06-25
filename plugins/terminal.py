@@ -15,4 +15,11 @@ async def terminal(client,message):
         await message.edit(f'command: {cmd}\n{s[1]}')
     else:
         await message.edit(f'Error: {s[1]}')
-module_list['terminal'] = f'{prefix}terminal [command]'
+@Client.on_message(filters.command("neofetch", prefixes=f'{prefix}') & filters.me)
+async def neofetch(client,message):
+    neofetch = subprocess.getstatusoutput('neofetch --stdout')
+    if neofetch[0] == 0:
+        await message.edit(neofetch[1])
+    else: await message.edit('Error: ',neofetch[1])
+
+module_list['terminal'] = f'{prefix}terminal [command] | {prefix}neofetch'
