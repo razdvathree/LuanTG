@@ -16,3 +16,4 @@ async def delete_module(client,message):
   except Exception as e:
     await message.edit('Oops error: ',e)
     
+module_list['DeleteModule'] = f'{prefix}delmod [module name.py]'
