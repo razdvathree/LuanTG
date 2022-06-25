@@ -2,7 +2,7 @@ from pyrogram import Client,filters
 from plugins.help import module_list
 from configurator import prefix
 import os
-
+import sys
 
 @Client.on_message(filters.command("delmod", prefixes=prefix) & filters.me)
 async def delete_module(client,message):
@@ -13,6 +13,7 @@ async def delete_module(client,message):
   try:
     os.remove(f'plugins/{mod_for_delete}')
     await message.edit('The module has been successfully removed!')
+    os.execv(sys.executable,['python']+sys.argv)
   except Exception as e:
     await message.edit('Oops error: ',e)
     
