@@ -1,7 +1,8 @@
 from pyrogram import Client, filters
 from plugins.help import module_list
+from configurator import prefix
 
-@Client.on_message(filters.command("webshot", prefixes='!') & filters.me)
+@Client.on_message(filters.command("webshot", prefixes='{prefix}') & filters.me)
 async def webshot(client, message):
     try:
         user_link = message.command[1]
@@ -21,4 +22,4 @@ async def webshot(client, message):
         )
 
 
-module_list['Webshot'] = f'!webshot [ssilka]'
+module_list['Webshot'] = f'{prefix}webshot [ssilka]'
