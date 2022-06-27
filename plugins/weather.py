@@ -2,6 +2,7 @@ from pyrogram import Client, filters
 from plugins.help import module_list
 import requests
 import os
+from configurator import prefix
 
 def get_pic(city):
     file_name = f"{city}.png"
@@ -16,7 +17,7 @@ def get_pic(city):
         return file_name
 
 
-@Client.on_message(filters.command("weather", prefixes='!') & filters.me)
+@Client.on_message(filters.command("weather", prefixes='{prefix}') & filters.me)
 async def weather(client, message):
     city = message.command[1]
     await message.edit("Check weather...")
@@ -29,4 +30,4 @@ async def weather(client, message):
     os.remove(f"{city}.png")
 
 
-module_list['Weather'] = f'!weather [город]'
+module_list['Weather'] = f'{prefix}weather [город]'
