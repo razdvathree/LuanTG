@@ -1,3 +1,0 @@
-# List of required packages
-pyrogram
-wget
