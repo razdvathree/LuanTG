@@ -11,7 +11,7 @@ async def auto_read(client, message):
     message.continue_propagation()
 
 
-@Client.on_message(filters.command("autoread", prefixes=prefix) & filters.me)
+@Client.on_message(filters.command("autoread", prefixes=f'{prefix}') & filters.me)
 async def add_to_auto_read(client, message):
     if message.chat.id in i:
         i.remove(message.chat.id)
