@@ -1,0 +1,24 @@
+from pyrogram import Client, filters
+from plugins.help import module_list, file_list
+
+the_regex = r"^r\/([^\s\/])+"
+i = filters.chat([])
+
+
+@Client.on_message(i)
+async def auto_read(client, message):
+    await client.read_history(message.chat.id)
+    message.continue_propagation()
+
+
+@Client.on_message(filters.command("autoread", prefixes=prefix) & filters.me)
+async def add_to_auto_read(client, message):
+    if message.chat.id in i:
+        i.remove(message.chat.id)
+        await message.edit("Autoread deactivated")
+    else:
+        i.add(message.chat.id)
+        await message.edit("Autoread activated")
+
+
+module_list['AutoReadChat'] = f'{prefix}autoread'
